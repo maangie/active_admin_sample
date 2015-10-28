@@ -50,7 +50,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'guard-rspec', require: false
   gem 'bullet'
-  gem 'rack-mini-profiler', require: false
+  gem 'rack-mini-profiler'
   gem 'rails-erd'
   gem 'factory_girl_rails'
   gem 'simplecov-rcov', require: false
