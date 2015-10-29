@@ -15,5 +15,7 @@
 #
 
 class Question < ActiveRecord::Base
-  validates :title, presence: true
+  validates :title,            presence: true
+  validates :publish_datetime, presence: true
+  validates :image,            presence: true
 end

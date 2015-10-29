@@ -11,7 +11,8 @@
 #
 
 class Answer < ActiveRecord::Base
-  validates :question_id, presence: true
+  belongs_to :question
+
   validates :answer_text, presence: true
   validates :total_count, presence: true
 end
