@@ -40,6 +40,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'annotate'
@@ -60,8 +61,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'faker-japanese'
   gem 'timecop'
-  gem 'brakeman', require: false
-  gem 'rails_best_practices'
 
   # Spring speeds up development by keeping your application running
   # in the background. Read more: https://github.com/rails/spring
@@ -71,6 +70,10 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  gem 'better_errors'
+  gem 'brakeman', require: false
+  gem 'rails_best_practices'
 end
 
 group :test do
