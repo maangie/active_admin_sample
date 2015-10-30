@@ -36,12 +36,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'annotate'
 gem 'carrierwave'
+gem 'rmagick'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
+  gem 'annotate'
   gem 'rspec-rails'
 
   gem 'pry-rails'

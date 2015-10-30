@@ -15,6 +15,10 @@
 #
 
 class Question < ActiveRecord::Base
+  has_many :answers, dependent: :destroy
+
+  mount_uploader :image, ImageUploader
+
   validates :title,            presence: true
   validates :publish_datetime, presence: true
   validates :image,            presence: true
