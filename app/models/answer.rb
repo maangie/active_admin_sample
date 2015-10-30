@@ -15,7 +15,12 @@
 #
 
 class Answer < ActiveRecord::Base
-  belongs_to :question
+  has_many :answers, dependent: :destroy
+  accepts_nested_attributes_for :answers, allow_destroy: true
+
+  mount_uploader :image, ImageUploader
+
+  just_define_datetime_picker :publish_datetime
 
   validates :answer_text, presence: true
   validates :total_count, presence: true

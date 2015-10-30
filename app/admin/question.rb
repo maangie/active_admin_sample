@@ -24,6 +24,16 @@ ActiveAdmin.register Question do
       f.input :image_cache, as: :hidden
     end
 
+    f.inputs do
+      # binding.pry
+      f.has_many(:answers, heading: 'Answers', allow_destroy: true,
+                 new_record: true) do |a|
+        # binding.pry
+        a.input :answer_text
+        a.input :total_count
+      end
+    end
+
     f.actions
   end
 end
