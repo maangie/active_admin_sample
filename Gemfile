@@ -60,6 +60,7 @@ group :development, :test do
   gem 'fuubar'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'faker'
   gem 'faker-japanese'
   gem 'timecop'
 
