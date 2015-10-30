@@ -60,7 +60,7 @@ group :development, :test do
   gem 'fuubar'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'faker-japanese'
+  gem 'ffaker'
   gem 'timecop'
 
   # Spring speeds up development by keeping your application running
