@@ -39,6 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'rmagick'
 gem 'devise'
+gem 'devise-i18n'
 gem 'activeadmin', github: 'activeadmin'
 gem 'rails-i18n'
 gem 'just-datetime-picker'
@@ -58,7 +59,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'simplecov-rcov', require: false
   gem 'fuubar'
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'ffaker'
   gem 'timecop'
@@ -79,4 +79,6 @@ end
 
 group :test do
   gem 'shoulda'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
