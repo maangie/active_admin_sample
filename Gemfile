@@ -41,6 +41,7 @@ gem 'rmagick'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'rails-i18n'
+gem 'just-datetime-picker'
 
 group :development, :test do
   gem 'annotate'
