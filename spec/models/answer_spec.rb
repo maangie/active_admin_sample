@@ -9,6 +9,10 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
+# Indexes
+#
+#  index_answers_on_question_id  (question_id)
+#
 
 require 'rails_helper'
 
