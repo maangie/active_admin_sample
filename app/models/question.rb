@@ -5,7 +5,7 @@
 #  id               :integer          not null, primary key
 #  title            :string           not null
 #  image            :string
-#  publish_datetime :string
+#  publish_datetime :datetime
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
