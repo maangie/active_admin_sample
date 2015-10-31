@@ -56,7 +56,6 @@ group :development, :test do
   gem 'bullet'
   gem 'rack-mini-profiler'
   gem 'rails-erd'
-  gem 'factory_girl_rails'
   gem 'simplecov-rcov', require: false
   gem 'fuubar'
   gem 'database_cleaner'
@@ -81,4 +80,5 @@ group :test do
   gem 'shoulda'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
 end

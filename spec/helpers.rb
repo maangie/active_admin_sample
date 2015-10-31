@@ -26,7 +26,11 @@ module Helpers
   def login_as_admin
     admin_user = FactoryGirl.create(:admin_user)
 
-    login_as(admin_user, scope: :admin_user, run_callbacks: false)
+    visit new_admin_user_session_path
+    fill_in 'メールアドレス', with: admin_user.email
+    fill_in 'パスワード', with: admin_user.password
+    click_button 'ログイン'
+
     admin_user
   end
 end

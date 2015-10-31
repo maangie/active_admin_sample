@@ -20,5 +20,7 @@ ActiveAdmin.register Answer do
       f.input :answer_text
       f.input :total_count
     end
+
+    f.actions
   end
 end
