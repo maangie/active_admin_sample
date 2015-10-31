@@ -6,12 +6,15 @@ RSpec.configure do |c|
 end
 
 RSpec.describe 'Answers', type: :request do
-  FactoryGirl.create(:question)
+  question = FactoryGirl.create(:question)
 
-  it 'create answer', skip: '動かないorz' do
+  it 'create answer' do
     login_as_admin
+    click_link 'Answers'
+    click_link 'Answer を作成する'
+    select question.title, from: 'Question'
+    fill_in 'Answer text', with: 'D:\ruby>cscript //E:rubyscript hello.rb'
 
-    visit new_admin_answer_path
-    puts page.text
+    click_button 'Create Answer'
   end
 end

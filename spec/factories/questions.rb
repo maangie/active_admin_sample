@@ -14,12 +14,13 @@
 #  index_questions_on_publish_datetime  (publish_datetime)
 #
 
-include Rack::Test::Methods
+UPLOAD_FILE =
+  Rack::Test::UploadedFile.new('spec/fixtures/question.jpg', 'image/jpg')
 
 FactoryGirl.define do
   factory :question do
     title 'ActiveScriptRubyについて'
-    image Rack::Test::UploadedFile.new("spec/fixtures/question.jpg", "mime/type")
+    image UPLOAD_FILE
     publish_datetime DateTime.now
   end
 end
