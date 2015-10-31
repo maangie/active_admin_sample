@@ -36,12 +36,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'annotate'
 gem 'carrierwave'
+gem 'rmagick'
 gem 'devise'
+gem 'devise-i18n'
 gem 'activeadmin', github: 'activeadmin'
+gem 'rails-i18n'
+gem 'just-datetime-picker'
 
 group :development, :test do
+  gem 'annotate'
   gem 'rspec-rails'
 
   gem 'pry-rails'
@@ -55,12 +59,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'simplecov-rcov', require: false
   gem 'fuubar'
-  gem 'capybara'
   gem 'database_cleaner'
-  gem 'faker-japanese'
+  gem 'ffaker'
   gem 'timecop'
-  gem 'brakeman', require: false
-  gem 'rails_best_practices'
 
   # Spring speeds up development by keeping your application running
   # in the background. Read more: https://github.com/rails/spring
@@ -70,8 +71,14 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  gem 'better_errors'
+  gem 'brakeman', require: false
+  gem 'rails_best_practices'
 end
 
 group :test do
   gem 'shoulda'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
